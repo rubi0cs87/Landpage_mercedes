@@ -1,0 +1,676 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Abhaya+Libre:wght@400;500;600;700;800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #eeeeee;
+    --secondary-color: white;
+    --tertiary-color: #D9D9D9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    list-style: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2, h3, a, button {
+    font-family: 'ABeeZee', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    height: 50px;
+    padding: 0 30px;
+}
+
+.left-bar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.left-bar img {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 10px;
+}
+
+.user-bar ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-low-res {
+    display: none;
+}
+
+.banner {
+    position: relative;
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.banner h1,
+.banner h2 {
+    position: absolute;
+    color: var(--secondary-color);
+    text-shadow: 1px 1px 4px black;
+    margin: 0;
+}
+
+.banner h1 {
+    font-family: 'Abhaya Libre', serif;
+    font-weight: 100;
+    font-size: 100px;
+    top: 30px;
+    left: 50px;
+}
+
+.banner h2 {
+    font-weight: 100;
+    font-size: 30px;
+    top: 120px;
+    left: 50px;
+}
+
+button {
+    background-color: var(--secondary-color);
+    border-radius: 45px;
+    width: 100px;
+    height: 45px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* CONTENEDORES DE COCHES */
+
+main .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    gap: 50px;
+    justify-content: center;
+}
+
+.carCard {
+    background-color: var(--tertiary-color);
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    padding: 20px;
+    gap: 20px;
+    box-sizing: border-box;
+    flex: 1 1 calc(50% - 50px);
+}
+
+.textCard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.textCard h2 {
+    padding: 30px 0 30px 30px;
+    font-size: 30px;
+}
+
+.textCard h3 {
+    padding: 0 0 30px 30px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.imgCard {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.carCard img {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+    max-height: 100%;
+}
+
+.footerCard {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-top: auto;
+    padding: 30px;
+}
+
+.moreInfo {
+    background-color: var(--secondary-color);
+    border-radius: 45px;
+    width: 100px;
+    height: 45px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* colores carCard */
+
+.colorSelector {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    align-self: end;
+}
+
+.colorSelector button {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+/* Colores de botones */
+
+.grey { background-color: #C5C5C5; }
+.red { background-color: #B20000; }
+.red2 { background-color: #A10000; }
+.red3 { background-color: #AE3F3F; }
+.blue { background-color: #0010A1; }
+.blue2 { background-color: #515F91; }
+.black { background-color: #000000; }
+.yellow { background-color: #E2C324; }
+
+/* Zona de mapa de luces */
+
+.headerMap {
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+}
+
+.headerMap h2 {
+    font-family: 'Abhaya Libre', serif;
+    font-weight: 400;
+    font-size: 96px;
+    top: 30px;
+    left: 50px;
+    max-width: 930px;
+}
+
+.headerMap h3 {
+    font-weight: 400;
+    font-size: 24px;
+    top: 120px;
+    left: 50px;
+    max-width: 500px;
+}
+
+.mapContainer {
+    position: relative;
+    display:inline-block;
+    width: 100%;
+}
+
+.mapLight img {
+    display:block;
+    width: 100%;
+    height:auto;
+    margin-top: 50px;
+}
+
+.storesCard h2 {
+    font-size: 50px;
+    font-weight: 400;
+    width: fit-content;
+    padding: 0 0 20px 0;
+    max-width: 400px;
+}
+
+.storesCard button{
+    width: 250px;
+}
+
+.mapLight .storesCard {
+    position:absolute;
+    padding:50px;
+    left: 50px; 
+    top: 50%;
+    transform: translate(0,-50%);
+    border-radius: 25px;
+    color: white;
+    background-color: rgba(125, 125, 125, 0.5);
+    box-sizing:border-box;
+}
+
+.carDescription {
+    display:flex;
+    overflow-x:auto;
+    flex: row nowrap;
+    padding: 30px;
+    gap: 50px;
+    width: 100%;
+}
+
+.carDescription div {
+    padding: 40px 30px;
+    background-color: var(--tertiary-color);
+}
+.carDescription img {
+    padding: 30px 0;
+}
+
+/* Decripción del Mercedes Maybach */
+
+.maybach {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.maybach img {
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.maybachText {
+    position: absolute;
+    top: 60%;
+    left: 100px;
+    width: 500px;
+    color: var(--secondary-color);
+    text-shadow: 1px 1px 4px black;
+}
+
+.maybachText h2 {
+    font-weight: 400;
+    font-size: 50px;
+    margin: 0;
+}
+
+.maybachText p {
+    font-weight: 400;
+    font-size: 20px;
+    margin: 20px 0 0 0;
+    width: 400px;
+}
+
+.maybachWheel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 0 50px;
+    align-items: center;
+    padding: 50px;
+    min-height: 0;
+}
+
+.maybachWheel h2 {
+    font-size: 50px;
+    font-weight: 400;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.maybachWheel p {
+    font-size: 20px;
+    font-weight: 400;
+    width: 60%;
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.maybachWheel img {
+    grid-column: 2;
+    grid-row: 1 / span 5;
+    width: 100%;
+    height: auto;
+}
+
+.maybachWheel a {
+    font-size: 20px;
+    text-decoration: none;
+    width: fit-content;
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #404243;
+    padding: 50px 0;
+}
+
+/*footer*/
+
+.footer {
+    background-color: var(--primary-color);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact h3 {
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+    width: 660px;
+}
+
+.contact button {
+    width: 200px;
+    height: 50px;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    background-color: black;
+    color: white;
+    padding: 200px 0 50px 0;
+}
+
+.newsletter h3 {
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+.newsletter p {
+    font-size: 14px;
+    font-weight: 100;
+    padding-bottom: 20px;
+}
+
+.subs {
+    position: relative;
+    width: 400px;
+    height: 40px;
+}
+
+.subs input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 0 100px 0 20px;
+    font-size: 14px;
+    background-color: black;
+    border: 1px solid white;
+    font-size: 12px;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+}
+
+.subs button {
+    width: 100px;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    height: 100%;
+    border: none;
+}
+
+.privacy {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 12px;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.socials {
+    display: flex;
+    gap:20px;
+    padding: 10px;
+}
+
+.footerMenus {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 50px 0;
+    background-color: black;
+    color: var(--secondary-color);
+}
+
+.footerMenus h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footerMenus a {
+    font-size: 14px;
+    color: gray;
+}
+
+.footerMenus div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (max-width: 900px) {
+    
+    .nav-bar ul {
+        display: none;
+    }
+
+    .user-bar .menu-low-res {
+        display: flex;
+    }
+
+    .banner .hero {
+        height: 100%; /* Hay que ajustar el tamaño para que se vea con un poco de zoom con respecto a la imagen original */
+    }
+
+    .banner h1 {
+        font-size: 24px;
+        bottom: 30px;
+        left: 15px;
+        top: auto;
+    }
+
+    .banner h2 {
+        font-size: 14px;
+        bottom: 15px;
+        left: 15px;
+        top: auto;
+    }
+
+    main .container {
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        }
+
+    .carCard {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        flex: 1 1 calc(100% - 20px);
+        text-align: center;
+        gap: 0;
+    }
+
+    .carCard .textCard {
+        padding: 0;
+        gap: 0;
+    }
+
+    .textCard h2, h3 {
+        padding: 0;
+    }
+
+    .footerCard {
+        padding: 0;
+    }
+    .colorSelector {
+        display:none;
+    }
+
+    .headerMap h2 {
+        font-size: 40px;
+        text-align: center;
+        padding: 20px 0 40px 0;
+    }
+
+    .headerMap h3 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .mapLight .storesCard {
+        left: 50%;
+        top: 57%;
+        transform: translate(-50%, -50%);
+        padding: 30px 20px;
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+    }
+
+    .storesCard h2 {
+        font-size: 36px;
+        text-align: center;
+        line-height: 1;
+        padding: 0 0 30px 0;
+    }
+
+    .carDetails {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carDetails h3{
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .carDetails img {
+        width: 100%;
+        min-width: 300px;
+        height: auto;
+    }
+
+    .maybach {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .maybachText {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        background-color: var(--tertiary-color);
+        color: black;
+        text-shadow: none;
+    }
+
+    .maybachText p {
+        align-self: center;
+        width: 100%;
+    }
+
+    .maybachWheel {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .maybachWheel h2 {
+        font-size: 24px;
+        order: 1;
+        padding: 20px 0;
+    }
+
+    .maybachWheel p {
+        width: 100%;
+        order: 3;
+        text-align: justify;
+        padding: 20px 0;
+    }
+    
+    .maybachWheel img {
+        width: 100%;
+        order: 2;
+        border-radius: 10px;
+    }
+
+    .maybachWheel a {
+        width: 100%;
+        order: 4;
+        padding: 20px 0;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px;
+    }
+
+    .contact h3 {
+        font-size: 16px;
+        text-align: center;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .contact button {
+        width: 100%;
+        max-width: 200px;
+        margin-top: 20px;
+    }
+
+    .newsletter {
+        padding: 50px 20px;
+    }
+
+    .footerMenus {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        gap: 30px;
+        text-align: center;
+    }
+
+}
